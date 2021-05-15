@@ -14,7 +14,7 @@ http://localhost:5000/api/test?url=https://storage.googleapis.com/bizupimg/profi
 }
 
 
-http://localhost:5000/api/test?url=https://storage.googleapis.com/bizupimg/profile_photo/WhatsApp%20Image%202020-08-23%20at%203.11.46%20PM%20-%20Himanshu%20Kohli.jpeg
+https://storage.googleapis.com/bizupimg/profile_photo/bhawya_logo.jpeg
 (not able to fetch this image from url, so calculated with locally stored image)
 
 {
@@ -27,6 +27,6 @@ http://localhost:5000/api/test?url=https://storage.googleapis.com/bizupimg/profi
 http://localhost:5000/api/test?url=https://storage.googleapis.com/bizupimg/profile_photo/kppl_logo.png
 
 {
-  "dominant_color": "#000000",
-  "logo_border": "#000000"
+  "dominant_color": "#020141",
+  "logo_border": "#020141"
 }
