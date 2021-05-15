@@ -25,7 +25,12 @@ class color_picker_class:
 
     def border_color(self, img):
         '''img: the image for which border color is needed'''
-        return img[0][0]
+        col=[0,0,0]
+        for i in range(min(len(img), len(img[0]))):
+            if img[i][i]!=0:
+                col=img[i][i]
+                break
+        return col
 
     def bgr2hex(self, b, g, r):
         '''function to convert bgr color codes to hexadecimal format'''
@@ -37,5 +42,8 @@ class color_picker_class:
             a: image given'''
 
         a = a.reshape(-1, a.shape[-1])
-        colors, count = np.unique(a, axis=0, return_counts=True)
-        return colors[count.argmax()]
+        a = a[~np.all(a == ([0,0,0]), axis=1)]
+        if len(a)>0:
+            colors, count = np.unique(a, axis=0, return_counts=True)
+            return colors[count.argmax()]
+        return [0,0,0]
